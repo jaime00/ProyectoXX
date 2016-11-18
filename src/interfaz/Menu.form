@@ -40,33 +40,25 @@
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnListadoVentasTotalActionPerformed"/>
                       </Events>
                     </MenuItem>
-                    <MenuItem class="javax.swing.JMenuItem" name="mnListadoClientes">
+                    <MenuItem class="javax.swing.JMenuItem" name="mnListadoClientesRegistrados">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Listado de Clientes Registrados"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnListadoClientesActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnListadoClientesRegistradosActionPerformed"/>
                       </Events>
                     </MenuItem>
-                    <MenuItem class="javax.swing.JMenuItem" name="jMenuItem1">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="Listado de Ventas por Cliente"/>
-                      </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem1ActionPerformed"/>
-                      </Events>
-                    </MenuItem>
-                    <MenuItem class="javax.swing.JMenuItem" name="jMenuItem2">
+                    <MenuItem class="javax.swing.JMenuItem" name="mnListadoDeVentasPorComida">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Listado de Ventas por Comida"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem2ActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnListadoDeVentasPorComidaActionPerformed"/>
                       </Events>
                     </MenuItem>
                   </SubComponents>
                 </Menu>
-                <Menu class="javax.swing.JMenu" name="mnCantidades">
+                <Menu class="javax.swing.JMenu" name="mnCantidadesVendidas">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Cantidades"/>
                   </Properties>

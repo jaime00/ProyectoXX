@@ -49,10 +49,9 @@ public class Menu extends javax.swing.JDialog {
         mnReportes = new javax.swing.JMenu();
         mnListado = new javax.swing.JMenu();
         mnListadoVentasTotal = new javax.swing.JMenuItem();
-        mnListadoClientes = new javax.swing.JMenuItem();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        mnCantidades = new javax.swing.JMenu();
+        mnListadoClientesRegistrados = new javax.swing.JMenuItem();
+        mnListadoDeVentasPorComida = new javax.swing.JMenuItem();
+        mnCantidadesVendidas = new javax.swing.JMenu();
         mnCantidadVendidas = new javax.swing.JMenuItem();
         mnCantidadClientes = new javax.swing.JMenuItem();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
@@ -126,33 +125,25 @@ public class Menu extends javax.swing.JDialog {
         });
         mnListado.add(mnListadoVentasTotal);
 
-        mnListadoClientes.setText("Listado de Clientes Registrados");
-        mnListadoClientes.addActionListener(new java.awt.event.ActionListener() {
+        mnListadoClientesRegistrados.setText("Listado de Clientes Registrados");
+        mnListadoClientesRegistrados.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mnListadoClientesActionPerformed(evt);
+                mnListadoClientesRegistradosActionPerformed(evt);
             }
         });
-        mnListado.add(mnListadoClientes);
+        mnListado.add(mnListadoClientesRegistrados);
 
-        jMenuItem1.setText("Listado de Ventas por Cliente");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        mnListadoDeVentasPorComida.setText("Listado de Ventas por Comida");
+        mnListadoDeVentasPorComida.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                mnListadoDeVentasPorComidaActionPerformed(evt);
             }
         });
-        mnListado.add(jMenuItem1);
-
-        jMenuItem2.setText("Listado de Ventas por Comida");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
-            }
-        });
-        mnListado.add(jMenuItem2);
+        mnListado.add(mnListadoDeVentasPorComida);
 
         mnReportes.add(mnListado);
 
-        mnCantidades.setText("Cantidades");
+        mnCantidadesVendidas.setText("Cantidades");
 
         mnCantidadVendidas.setText("Cantidades vendidas");
         mnCantidadVendidas.addActionListener(new java.awt.event.ActionListener() {
@@ -160,7 +151,7 @@ public class Menu extends javax.swing.JDialog {
                 mnCantidadVendidasActionPerformed(evt);
             }
         });
-        mnCantidades.add(mnCantidadVendidas);
+        mnCantidadesVendidas.add(mnCantidadVendidas);
 
         mnCantidadClientes.setText("Cantidad de Clientes");
         mnCantidadClientes.addActionListener(new java.awt.event.ActionListener() {
@@ -168,9 +159,9 @@ public class Menu extends javax.swing.JDialog {
                 mnCantidadClientesActionPerformed(evt);
             }
         });
-        mnCantidades.add(mnCantidadClientes);
+        mnCantidadesVendidas.add(mnCantidadClientes);
 
-        mnReportes.add(mnCantidades);
+        mnReportes.add(mnCantidadesVendidas);
 
         mnOpciones.add(mnReportes);
         mnOpciones.add(jSeparator1);
@@ -230,10 +221,10 @@ public class Menu extends javax.swing.JDialog {
 
     }//GEN-LAST:event_cmdRegistrarClienteActionPerformed
 
-    private void mnListadoClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnListadoClientesActionPerformed
+    private void mnListadoClientesRegistradosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnListadoClientesRegistradosActionPerformed
         ListadoCLTotal lct = new ListadoCLTotal(null, true);
         lct.setVisible(true);
-    }//GEN-LAST:event_mnListadoClientesActionPerformed
+    }//GEN-LAST:event_mnListadoClientesRegistradosActionPerformed
 
     private void mnCantidadClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnCantidadClientesActionPerformed
 
@@ -242,16 +233,10 @@ public class Menu extends javax.swing.JDialog {
         Helper.mensaje(this, "El número de Clientes ingresados es de: " + cont, 1);        // TODO add your handling code here:
     }//GEN-LAST:event_mnCantidadClientesActionPerformed
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-
-        ListadoPoCL lpc = new ListadoPoCL(null, true);
-        lpc.setVisible(true);
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
-
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+    private void mnListadoDeVentasPorComidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnListadoDeVentasPorComidaActionPerformed
         ListadoPorComida lpcc = new ListadoPorComida(null, true);
         lpcc.setVisible(true);
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
+    }//GEN-LAST:event_mnListadoDeVentasPorComidaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -302,16 +287,15 @@ public class Menu extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JMenuItem mnCantidadClientes;
     private javax.swing.JMenuItem mnCantidadVendidas;
-    private javax.swing.JMenu mnCantidades;
+    private javax.swing.JMenu mnCantidadesVendidas;
     private javax.swing.JMenuItem mnCerrarCesion;
     private javax.swing.JMenu mnListado;
-    private javax.swing.JMenuItem mnListadoClientes;
+    private javax.swing.JMenuItem mnListadoClientesRegistrados;
+    private javax.swing.JMenuItem mnListadoDeVentasPorComida;
     private javax.swing.JMenuItem mnListadoVentasTotal;
     private javax.swing.JMenu mnOpciones;
     private javax.swing.JMenu mnReportes;
