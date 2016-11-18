@@ -109,7 +109,7 @@ public class ListadoPorComida extends javax.swing.JDialog {
                 cmdRegresarActionPerformed(evt);
             }
         });
-        jPanel1.add(cmdRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 420, 160, 40));
+        jPanel1.add(cmdRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 430, 160, 40));
 
         rbH.setBackground(new java.awt.Color(0, 0, 0));
         Comidas.add(rbH);
@@ -145,16 +145,14 @@ public class ListadoPorComida extends javax.swing.JDialog {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 573, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 573, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 478, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        setSize(new java.awt.Dimension(573, 478));
+        setSize(new java.awt.Dimension(573, 477));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

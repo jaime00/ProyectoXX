@@ -39,6 +39,7 @@ public class ListadoCLTotal extends javax.swing.JDialog {
         tblTablaPersonas = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
         cmdRegresar = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setUndecorated(true);
@@ -76,7 +77,7 @@ public class ListadoCLTotal extends javax.swing.JDialog {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 0, 0));
         jLabel1.setText("LISTADO DE CLIENTES REGISTRADOS");
-        jPanel5.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 30, -1, -1));
+        jPanel5.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 20, -1, -1));
 
         cmdRegresar.setFont(new java.awt.Font("Tahoma", 3, 24)); // NOI18N
         cmdRegresar.setForeground(new java.awt.Color(255, 0, 0));
@@ -87,6 +88,9 @@ public class ListadoCLTotal extends javax.swing.JDialog {
             }
         });
         jPanel5.add(cmdRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 320, 170, 30));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/950399__mcdonald-s_p.jpg"))); // NOI18N
+        jPanel5.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 370));
 
         getContentPane().add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 370));
 
@@ -150,6 +154,7 @@ public class ListadoCLTotal extends javax.swing.JDialog {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton cmdRegresar;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable tblTablaPersonas;
