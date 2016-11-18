@@ -65,22 +65,6 @@ public class Helper {
         }
     }
 
-    public static void llenarTabla(JTable tabla, String ruta, int cant, String categoria) {
-        DefaultTableModel tm;
-        int nf;
-        ArrayList<Comida> comidas = traerDatos(ruta);
-        tm = (DefaultTableModel) tabla.getModel();
-        limpiadoTabla(tabla);
-        nf = comidas.size();
-        tm.setRowCount(nf);
-        for (int i = 0; i < nf; i++) {
-            tabla.setValueAt(i + 1, i, 0);
-            tabla.setValueAt(comidas.get(i).getNombre(), i, 1);
-            tabla.setValueAt(comidas.get(i).getPrecio(), i, 2);
-            tabla.setValueAt(comidas.get(i).getCategoria(), i, 4);
-        }
-    }
-
     public static void llenarTabla(JTable tabla, String ruta) {
         DefaultTableModel tm;
         int nf;

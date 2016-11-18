@@ -25,6 +25,7 @@ public class Menu extends javax.swing.JDialog {
         initComponents();
         ruta = "src/datos/Comidas.txt";
         rutaCL = "src/datos/Clientes.txt";
+        String rutaV = "src/Ventas.txt";
 
         cmdRegistrarCliente.requestFocusInWindow();
     }
@@ -205,7 +206,7 @@ public class Menu extends javax.swing.JDialog {
 
         int cont;
         cont = Helper.traerDatos(ruta).size();
-        Helper.mensaje(this, "El número de Comida ingresada es: " + cont, 1);
+        Helper.mensaje(this, "El número de ventas ingresadas es: " + cont, 1);
     }//GEN-LAST:event_mnCantidadVendidasActionPerformed
 
     private void mnListadoVentasTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnListadoVentasTotalActionPerformed

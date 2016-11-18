@@ -17,6 +17,9 @@ public class Pedidos extends javax.swing.JDialog {
     public Pedidos(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        try{
+            
+        }catch(IllegalArgumentException e){}
     }
 
     /**

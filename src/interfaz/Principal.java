@@ -168,7 +168,8 @@ public class Principal extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Digite por favor la contraseña");
             passContrasena.requestFocusInWindow();
         } else if (txtUsuario.getText().equalsIgnoreCase("ADMIN") && passContrasena.getText().equals("123")) {
-
+            
+            this.setVisible(false);
             Menu a = new Menu(this, true);
             a.setVisible(true);
 
