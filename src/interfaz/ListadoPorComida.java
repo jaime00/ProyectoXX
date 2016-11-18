@@ -32,22 +32,24 @@ public class ListadoPorComida extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        Comidas = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblTablaH = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
-        chbH = new javax.swing.JCheckBox();
-        chbP = new javax.swing.JCheckBox();
-        chbB = new javax.swing.JCheckBox();
-        chbD = new javax.swing.JCheckBox();
-        chbA = new javax.swing.JCheckBox();
         cmdListar = new javax.swing.JButton();
         cmdRegresar = new javax.swing.JButton();
+        rbH = new javax.swing.JRadioButton();
+        rbP = new javax.swing.JRadioButton();
+        rbB = new javax.swing.JRadioButton();
+        rbD = new javax.swing.JRadioButton();
+        rbA = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setUndecorated(true);
 
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Listado"));
@@ -55,6 +57,7 @@ public class ListadoPorComida extends javax.swing.JDialog {
 
         tblTablaH.setBackground(new java.awt.Color(0, 0, 0));
         tblTablaH.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        tblTablaH.setForeground(new java.awt.Color(255, 255, 255));
         tblTablaH.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -82,30 +85,14 @@ public class ListadoPorComida extends javax.swing.JDialog {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 550, 290));
 
-        jLabel1.setText("LISTADO DE VENTAS POR COMIDA");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 10, -1, -1));
+        jLabel1.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel1.setText("LISTADO DE VENTAS POR CATEGORIA");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 20, 350, -1));
 
-        chbH.setText("Hamburguesas");
-        chbH.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chbHActionPerformed(evt);
-            }
-        });
-        jPanel1.add(chbH, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, -1, -1));
-
-        chbP.setText("Pollos");
-        jPanel1.add(chbP, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 50, -1, -1));
-
-        chbB.setText("Bebidas");
-        jPanel1.add(chbB, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 50, -1, -1));
-
-        chbD.setText("Desayunos");
-        jPanel1.add(chbD, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 50, -1, -1));
-
-        chbA.setText("Acompañamientos");
-        jPanel1.add(chbA, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 90, -1, -1));
-
+        cmdListar.setBackground(new java.awt.Color(255, 255, 255));
         cmdListar.setText("LISTAR");
+        cmdListar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         cmdListar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdListarActionPerformed(evt);
@@ -123,6 +110,36 @@ public class ListadoPorComida extends javax.swing.JDialog {
             }
         });
         jPanel1.add(cmdRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 420, 160, 40));
+
+        rbH.setBackground(new java.awt.Color(0, 0, 0));
+        Comidas.add(rbH);
+        rbH.setForeground(new java.awt.Color(255, 255, 255));
+        rbH.setText("Hamburguesas");
+        jPanel1.add(rbH, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 50, -1, -1));
+
+        rbP.setBackground(new java.awt.Color(0, 0, 0));
+        Comidas.add(rbP);
+        rbP.setForeground(new java.awt.Color(255, 255, 255));
+        rbP.setText("Pollos");
+        jPanel1.add(rbP, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 50, -1, -1));
+
+        rbB.setBackground(new java.awt.Color(0, 0, 0));
+        Comidas.add(rbB);
+        rbB.setForeground(new java.awt.Color(255, 255, 255));
+        rbB.setText("Bebidas");
+        jPanel1.add(rbB, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 50, -1, -1));
+
+        rbD.setBackground(new java.awt.Color(0, 0, 0));
+        Comidas.add(rbD);
+        rbD.setForeground(new java.awt.Color(255, 255, 255));
+        rbD.setText("Desayunos");
+        jPanel1.add(rbD, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 50, -1, -1));
+
+        rbA.setBackground(new java.awt.Color(0, 0, 0));
+        Comidas.add(rbA);
+        rbA.setForeground(new java.awt.Color(255, 255, 255));
+        rbA.setText("Acompañamientos");
+        jPanel1.add(rbA, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 90, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -145,30 +162,25 @@ public class ListadoPorComida extends javax.swing.JDialog {
 
     }//GEN-LAST:event_tblTablaHMouseClicked
 
-    private void chbHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chbHActionPerformed
-    
-        // TODO add your handling code here:
-    }//GEN-LAST:event_chbHActionPerformed
-
     private void cmdListarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdListarActionPerformed
         String h ="Hamburguesas";
         String b = "Bebidas";
         String d = "Desayunos";
         String p = "Pollos";
         String a = "Acompañamientos";
-        if(chbH.isSelected()){
+        if(rbH.isSelected()){
             Helper.listadoPorComida(tblTablaH, rutaV, h); 
         }
-        if(chbB.isSelected()){
+        if(rbB.isSelected()){
             Helper.listadoPorComida(tblTablaH, rutaV, b);
         }
-        if(chbD.isSelected()){
+        if(rbD.isSelected()){
             Helper.listadoPorComida(tblTablaH, rutaV, d);
         }
-        if(chbP.isSelected()){
+        if(rbP.isSelected()){
             Helper.listadoPorComida(tblTablaH, rutaV, p);
         }
-        if(chbA.isSelected()){
+        if(rbA.isSelected()){
             Helper.listadoPorComida(tblTablaH, rutaV, a);
         }
     }//GEN-LAST:event_cmdListarActionPerformed
@@ -221,17 +233,18 @@ public class ListadoPorComida extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JCheckBox chbA;
-    private javax.swing.JCheckBox chbB;
-    private javax.swing.JCheckBox chbD;
-    private javax.swing.JCheckBox chbH;
-    private javax.swing.JCheckBox chbP;
+    private javax.swing.ButtonGroup Comidas;
     private javax.swing.JButton cmdListar;
     private javax.swing.JButton cmdRegresar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JRadioButton rbA;
+    private javax.swing.JRadioButton rbB;
+    private javax.swing.JRadioButton rbD;
+    private javax.swing.JRadioButton rbH;
+    private javax.swing.JRadioButton rbP;
     private javax.swing.JTable tblTablaH;
     // End of variables declaration//GEN-END:variables
 }
