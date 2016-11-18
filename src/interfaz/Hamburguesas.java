@@ -16,7 +16,6 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.JOptionPane;
 
 /**
  *
@@ -398,7 +397,7 @@ public class Hamburguesas extends javax.swing.JDialog {
     private void cmdAceptar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdAceptar1ActionPerformed
 
         if (txtCant1.getText().trim().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Digite por favor la cantidad a llevar");
+            Helper.mensaje(this, "Digite por favor la cantidad a llevar",1);
             txtCant1.requestFocusInWindow();
         } else if (Integer.parseInt(txtCant1.getText()) == 0) {
             Helper.mensaje(this, "La cantidad no puede ser cero", 3);
@@ -436,7 +435,7 @@ public class Hamburguesas extends javax.swing.JDialog {
     private void cmdAceptar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdAceptar2ActionPerformed
 
         if (txtCant2.getText().trim().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Digite por favor la cantidad a llevar");
+            Helper.mensaje(this, "Digite por favor la cantidad a llevar",1);
             txtCant2.requestFocusInWindow();
         } else if (Integer.parseInt(txtCant2.getText()) == 0) {
             Helper.mensaje(this, "La cantidad no puede ser cero", 3);

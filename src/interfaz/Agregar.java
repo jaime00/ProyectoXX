@@ -17,6 +17,7 @@ import java.util.logging.Logger;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 
+
 /**
  *
  * @author jaime
@@ -360,13 +361,13 @@ public class Agregar extends javax.swing.JDialog {
     private void cmdGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdGuardarActionPerformed
 
         if (txtNombre.getText().trim().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Digite por favor el nombre del cliente");
+            Helper.mensaje(this, "Digite por favor el nombre del cliente",1);
             txtNombre.requestFocusInWindow();
         } else if (txtApellido.getText().trim().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Digite por favor el apellido del cliente");
+            Helper.mensaje(this, "Digite por favor el apellido del cliente",1);
             txtApellido.requestFocusInWindow();
         } else if (txtTarjeta.getText().trim().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Digite por favor la tarjeta de credido por favor");
+            Helper.mensaje(this, "Digite por favor la tarjeta de credido por favor",1);
             txtTarjeta.requestFocusInWindow();
         } else {
 
