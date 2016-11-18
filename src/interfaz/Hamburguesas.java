@@ -400,6 +400,10 @@ public class Hamburguesas extends javax.swing.JDialog {
         if (txtCant1.getText().trim().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Digite por favor la cantidad a llevar");
             txtCant1.requestFocusInWindow();
+        } else if (Integer.parseInt(txtCant1.getText()) == 0) {
+            Helper.mensaje(this, "La cantidad no puede ser cero", 3);
+            txtCant1.requestFocusInWindow();
+
         } else {
             try {
                 int cant = Integer.parseInt(txtCant1.getText());
@@ -434,6 +438,10 @@ public class Hamburguesas extends javax.swing.JDialog {
         if (txtCant2.getText().trim().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Digite por favor la cantidad a llevar");
             txtCant2.requestFocusInWindow();
+        } else if (Integer.parseInt(txtCant2.getText()) == 0) {
+            Helper.mensaje(this, "La cantidad no puede ser cero", 3);
+            txtCant2.requestFocusInWindow();
+
         } else {
             try {
                 int cant = Integer.parseInt(txtCant2.getText());
@@ -501,6 +509,10 @@ public class Hamburguesas extends javax.swing.JDialog {
         if (txtCant3.getText().trim().isEmpty()) {
             Helper.mensaje(this, "Digite por favor la cantidad a llevar", 1);
             txtCant3.requestFocusInWindow();
+        } else if (Integer.parseInt(txtCant3.getText()) == 0) {
+            Helper.mensaje(this, "La cantidad no puede ser cero", 3);
+            txtCant3.requestFocusInWindow();
+
         } else {
             try {
                 int cant = Integer.parseInt(txtCant3.getText());
