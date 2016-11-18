@@ -51,6 +51,7 @@ public class Menu extends javax.swing.JDialog {
         mnListadoVentasTotal = new javax.swing.JMenuItem();
         mnListadoClientes = new javax.swing.JMenuItem();
         jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
         mnCantidades = new javax.swing.JMenu();
         mnCantidadVendidas = new javax.swing.JMenuItem();
         mnCantidadClientes = new javax.swing.JMenuItem();
@@ -140,6 +141,14 @@ public class Menu extends javax.swing.JDialog {
             }
         });
         mnListado.add(jMenuItem1);
+
+        jMenuItem2.setText("Listado de Ventas por Comida");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        mnListado.add(jMenuItem2);
 
         mnReportes.add(mnListado);
 
@@ -239,6 +248,11 @@ public class Menu extends javax.swing.JDialog {
         lpc.setVisible(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        ListadoPorComida lpcc = new ListadoPorComida(null, true);
+        lpcc.setVisible(true);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -289,6 +303,7 @@ public class Menu extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JMenuItem mnCantidadClientes;

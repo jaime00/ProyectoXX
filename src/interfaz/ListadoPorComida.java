@@ -16,11 +16,11 @@ public class ListadoPorComida extends javax.swing.JDialog {
     /**
      * Creates new form ListadoPorComida
      */
-    String rutaC;
+    String rutaV;
     public ListadoPorComida(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
-         rutaC = "src/datos/Comidas.txt";
+         rutaV = "src/datos/Ventas.txt";
     }
 
     /**
@@ -137,7 +137,8 @@ public class ListadoPorComida extends javax.swing.JDialog {
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 478, Short.MAX_VALUE)
         );
 
-        pack();
+        setSize(new java.awt.Dimension(573, 478));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void tblTablaHMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblTablaHMouseClicked
@@ -151,8 +152,24 @@ public class ListadoPorComida extends javax.swing.JDialog {
 
     private void cmdListarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdListarActionPerformed
         String h ="Hamburguesas";
+        String b = "Bebidas";
+        String d = "Desayunos";
+        String p = "Pollos";
+        String a = "Acompañamientos";
         if(chbH.isSelected()){
-            Helper.listadoPorComida(tblTablaH, rutaC, h);
+            Helper.listadoPorComida(tblTablaH, rutaV, h); 
+        }
+        if(chbB.isSelected()){
+            Helper.listadoPorComida(tblTablaH, rutaV, b);
+        }
+        if(chbD.isSelected()){
+            Helper.listadoPorComida(tblTablaH, rutaV, d);
+        }
+        if(chbP.isSelected()){
+            Helper.listadoPorComida(tblTablaH, rutaV, p);
+        }
+        if(chbA.isSelected()){
+            Helper.listadoPorComida(tblTablaH, rutaV, a);
         }
     }//GEN-LAST:event_cmdListarActionPerformed
 

@@ -303,33 +303,34 @@ public class Helper {
 
         }
     }
-        public static void llenarTabla(JTable tabla, ArrayList<Comida> comidas) {
+
+    public static void llenarTabla(JTable tabla, ArrayList<Venta> ventas) {
         DefaultTableModel tm;
         int nf;
         tm = (DefaultTableModel) tabla.getModel();
         limpiadoTabla(tabla);
-        nf = comidas.size();
+        nf = ventas.size();
         tm.setRowCount(nf);
         for (int i = 0; i < nf; i++) {
             tabla.setValueAt(i + 1, i, 0);
-            tabla.setValueAt(comidas.get(i).getNombre(), i, 1);
-            tabla.setValueAt(comidas.get(i).getPrecio(), i, 2);
-            tabla.setValueAt(comidas.get(i).getPrecio(), i, 3);
-            
+            tabla.setValueAt(ventas.get(i).getC().getNombre(), i, 1);
+            tabla.setValueAt(ventas.get(i).getC().getPrecio(), i, 2);
+            tabla.setValueAt(ventas.get(i).getCant(), i, 3);
+            tabla.setValueAt(ventas.get(i).getC().getCategoria(), i, 4);
+
         }
     }
-    
 
     public static void listadoPorComida(JTable tabla, String ruta, String categoria) {
-        ArrayList<Comida> comidas = traerDatos(ruta);
-        ArrayList<Comida> comidasFiltradas = new ArrayList();
-        for (int i = 0; i < comidas.size(); i++) {
-            if (comidas.get(i).getCategoria().equals(categoria)) {
-                comidasFiltradas.add(comidas.get(i));
+        ArrayList<Venta> ventas = traerDatos(ruta);
+        ArrayList<Venta> ventasFiltradas = new ArrayList();
+        for (int i = 0; i < ventas.size(); i++) {
+            if (ventas.get(i).getC().getCategoria().equals(categoria)) {
+                ventasFiltradas.add(ventas.get(i));
             }
 
         }
-        llenarTabla(tabla, comidasFiltradas);
+        llenarTabla(tabla, ventasFiltradas);
 
     }
 
